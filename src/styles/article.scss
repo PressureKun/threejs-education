@@ -1,0 +1,147 @@
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/navigation/navigation";
+@import "../../node_modules/swiper/modules/pagination/pagination";
+@import "../../node_modules/swiper/modules/thumbs/thumbs";
+@import "../../node_modules/photoswipe/dist/photoswipe";
+
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/icon';
+
+@import 'blocks/modals/pswp.scss';
+
+@import 'sections/article/mtp-table';
+@import 'sections/article/mtp-row-img';
+@import 'sections/article/mtp-gallery';
+@import 'sections/article/mtp-document';
+@import 'sections/article/mtp-spoiler';
+@import 'sections/article/mtp-inline-item';
+@import 'sections/article/mtp-slider';
+
+.mtp {
+	font-size: 16px;
+	line-height: 24px;
+
+	p {
+		margin-bottom: 22px;
+		margin-top: 22px;
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	ul, ol {
+		margin-bottom: 56px;
+		margin-top: 16px;
+		padding-left: 24px;
+		list-style: none;
+
+		li {
+			position: relative;
+			margin-bottom: 22px;
+			margin-top: 22px;
+			font-size: 18px;
+			line-height: 26px;
+		}
+	}
+
+	ul {
+		li {
+			display: list-item;
+			list-style-type: disc;
+
+			&::marker {
+				position: absolute;
+				top: 13px;
+				width: 6px;
+				height: 6px;
+				color: $typography-accent;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	ol {
+		
+
+		li {
+			list-style-type: decimal;
+			display: list-item;
+			padding-left: 8px;
+			&::marker {
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 24px;
+			}
+		}
+	}
+
+	blockquote {
+		width: 100%;
+		margin: 56px 0;
+		padding: 5px 24px;
+		border-left: 4px solid $theme-primary;
+		font-size: 18px;
+		line-height: 26px;
+		color: $typography-secondary;
+	}
+
+	h1 {
+		margin: 32px 0;
+		font-size: 42px;
+		line-height: 62px;
+		font-weight: $font-weight--800;
+		text-transform: uppercase;
+	}
+
+	h2 {
+		margin: 32px 0;
+		font-weight: 800;
+		font-size: 30px;
+		line-height: 44px;
+		text-transform: uppercase;
+	}
+
+	h3 {
+		margin: 32px 0;
+		font-weight: 800;
+		font-size: 24px;
+		line-height: 36px;
+		text-transform: uppercase;
+	}
+
+	h4 {
+		margin: 32px 0;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 36px;
+	}
+
+	h5 {
+		margin: 24px 0;
+		font-weight: 800;
+		font-size: 20px;
+		line-height: 28px;
+		/* identical to box height, or 140% */
+		text-transform: uppercase;
+	}
+
+	h6 {
+		margin: 24px 0;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 28px;
+		/* identical to box height, or 140% */
+	}
+
+	p {
+		margin-bottom: 16px;
+		margin-top: 16px;
+	}
+
+	&__header {
+		margin-bottom: 24px;
+
+	}
+}
+

@@ -1,0 +1,67 @@
+<div class="tabs js-tabs" data-ajax="true">
+
+	<!--кнопка - демонстрация имитирования аякса-->
+	<button class="btn tabs__ajax-test" 
+	onclick="(() => {
+		console.log(this)
+		let container = this.closest('.js-tabs').querySelector('.tabs__item.active');
+		container.innerHTML += container.innerHTML
+		console.log('da')
+	})();"
+	>
+		ajax
+	</button>
+
+	<div class="tabs__controls js-tabs-controls">
+
+		<button type="button" class="btn tabs__btn js-tabs-btn active">
+			Таб 1
+		</button>
+
+		<button type="button" class="btn tabs__btn js-tabs-btn">
+			Таб 2
+		</button>
+
+		<button type="button" class="btn tabs__btn js-tabs-btn">
+			Таб 3
+		</button>
+
+	</div>
+
+	<div class="tabs__content js-tabs-content">
+
+		<div class="tabs__item js-tabs-item active">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione at excepturi laboriosam? Veritatis fugit
+				aut quo dolore quibusdam perferendis est qui animi pariatur deserunt magni iure quod, et accusantium
+				recusandae. Hic quis enim eveniet voluptas reiciendis sint quae, deserunt id.
+      </p>
+		</div>
+
+		<div class="tabs__item js-tabs-item">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione at excepturi laboriosam? Veritatis fugit
+				aut quo dolore quibusdam perferendis est qui animi pariatur deserunt magni iure quod, et accusantium
+				recusandae. Hic quis enim eveniet voluptas reiciendis sint quae, deserunt id.
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione at excepturi laboriosam? Veritatis fugit
+				aut quo dolore quibusdam perferendis est qui animi pariatur deserunt magni iure quod, et accusantium
+				recusandae. Hic quis enim eveniet voluptas reiciendis sint quae, deserunt id.
+      </p>
+		</div>
+    
+		<div class="tabs__item js-tabs-item">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione at excepturi laboriosam? Veritatis fugit
+				aut quo dolore quibusdam perferendis est qui animi pariatur deserunt magni iure quod, et accusantium
+				recusandae. Hic quis enim eveniet voluptas reiciendis sint quae, deserunt id.
+      </p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione at excepturi laboriosam? Veritatis fugit
+				aut quo dolore quibusdam perferendis est qui animi pariatur deserunt magni iure quod, et accusantium
+				recusandae. Hic quis enim eveniet voluptas reiciendis sint quae, deserunt id.
+      </p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione at excepturi laboriosam? Veritatis fugit
+				aut quo dolore quibusdam perferendis est qui animi pariatur deserunt magni iure quod, et accusantium
+				recusandae. Hic quis enim eveniet voluptas reiciendis sint quae, deserunt id.
+      </p>
+		</div>
+
+	</div>
+
+</div>

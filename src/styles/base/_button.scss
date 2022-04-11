@@ -1,0 +1,131 @@
+.btn {
+	@include transition();
+	display: inline-block;
+	font-family: $font-family;
+	font-size: 2.5rem;
+	line-height: 1.2;
+	font-weight: 700;
+	text-align: center;
+	padding: 18px;
+	text-decoration: none;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+
+	&--primary {
+		color: $btn-text-primary;
+		background: $btn-primary-bg-normal;
+		border-radius: 15px;
+
+		&:hover, &:focus {
+			outline: none;
+			background: $btn-primary-bg-hover;
+			color: $btn-text-primary;
+		}
+
+		&:active {
+			background: $btn-primary-bg-active;
+		}
+	}
+
+	&--link {
+		color: $link-base-text-normal;
+		text-transform: uppercase;
+		padding: 0;
+
+		&:hover, &:active, &:focus {
+			outline: none;
+			color: $link-base-text-hover;
+		}
+
+		&.btn--icon {
+			display: inline-flex;
+			align-items: center;
+
+			.icon {
+				margin-left: 40px;
+				position: relative;
+				@include transition();
+				right: 0;
+			}
+
+			&:hover {
+				.icon {
+
+					right: 10px;
+				}
+			}
+		}
+	}
+
+}
+
+.burger-btn {
+	//display: none;
+	@media (max-width: $media-l) {
+		display: flex;
+		width: 40px;
+		height: 40px;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		position: relative;
+		z-index: 15;
+	}
+
+	span {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 2px;
+		background-color: $typography-primary;
+		@include transition();
+		@media (max-width: $media-m) {
+			width: 24px;
+		}
+
+
+		&:after, &:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 2px;
+			background-color: $typography-primary;
+			@include transition();
+			@media (max-width: $media-m) {
+				width: 24px;
+			}
+		}
+
+		&:before {
+			top: -8px;
+			@media (max-width: $media-m) {
+				top: -6px;
+			}
+		}
+
+		&:after {
+			bottom: -8px;
+			@media (max-width: $media-m) {
+				bottom: -6px;
+			}
+		}
+	}
+
+	&.active {
+		span {
+			transform: rotate(45deg);
+
+			&:after {
+				transform: scale(0);
+			}
+
+			&:before {
+				transform: rotate(-90deg);
+				top: 0;
+			}
+		}
+	}
+
+}

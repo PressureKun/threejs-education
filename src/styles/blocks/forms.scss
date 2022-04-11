@@ -1,0 +1,258 @@
+.field {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	cursor: pointer;
+    margin-top: 16px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&__input {
+		outline: none;
+		display: block;
+		border: 1px solid $input-border-normal;
+		padding: 11px 30px;
+		border-radius: 10px;
+		background-color: $input-bg-normal;
+		font-size: 14px;
+		font-weight: $font-weight;
+		line-height: 1.22;
+		color: $typography-primary;
+        @include transition;
+
+		&:hover {
+			background-color: $input-bg-hover;
+			border-color: $input-border-focus;
+			// color: $input-border-focus;
+
+			&::placeholder {
+				color: $input-placeholder-hover;
+			}
+		}
+
+		&:focus {
+			background-color: $input-bg-normal;
+			border-color: $input-border-focus;
+			color: $typography-primary;
+		}
+
+		&::placeholder {
+			color: $typography-secondary;
+			font-weight: $font-weight;
+			font-family: $font-family;
+			font-size: 14px;
+			line-height: 1.22;
+		}
+
+		&:required {
+			&+.field__title {
+				&::after {
+					content: '*';
+					color: $input-placeholder-required;
+					margin-left: 4px;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font-size: 1.75rem;
+		line-height: 1.57;
+		color: $typography-primary;
+		margin-bottom: 4px;
+	}
+
+	&__toggle-password {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		z-index: 1;
+		top: 26px;
+		right: 1px;
+		width: 45px;
+		height: 45px;
+		border: none;
+		padding: 0;
+		background-color: transparent;
+		cursor: pointer;
+		color: $theme-primary;
+
+		.icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			width: 24px;
+			height: 24px;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.2s ease-in-out 0s;
+		}
+
+		&.shown {
+			.icon--eye-show {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		&.hide {
+			.icon--eye-hide {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+
+	}
+
+	ul {
+		margin: 4px 0 0;
+		padding: 0;
+		list-style: none;
+		font-size: rem(16);
+		line-height: rem(20);
+		color: $func-error;
+
+		&+.field__input {
+			border-color: $func-error;
+		}
+
+		li {
+			margin: 0;
+		}
+	}
+}
+
+/*Стили чекбоксов и радиокнопок*/
+.field-check {
+	display: block;
+	position: relative;
+	cursor: pointer;
+    margin-top: 16px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&__input {
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 18px;
+		height: 18px;
+		margin: 0;
+		opacity: 0;
+
+		&[type=checkbox] {
+			&+.field-check__name {
+				&::before {
+					@include transition();
+					content: '';
+					display: block;
+					position: absolute;
+					top: 3px;
+					left: 0;
+					width: 18px;
+					height: 18px;
+					border: 1px solid $input-icon-normal;
+					border-radius: 4px;
+				}
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: 7px;
+					left: 4px;
+					width: 10px;
+					height: 10px;
+					mask-size: contain;
+					mask-repeat: no-repeat;
+					mask-position: center;
+					-webkit-mask-size: contain;
+					-webkit-mask-repeat: no-repeat;
+					-webkit-mask-position: center;
+					background-color: $white-color;
+					transition: color 0.2s ease-in-out 0s;
+					mask-image: url(../images/svg/functional/checkbox.svg);
+					-webkit-mask-image: url(../images/svg//functional/checkbox.svg);
+				}
+
+				&:hover {
+					&::before {
+						border-color: $input-icon-hover;
+					}
+				}
+			}
+
+			&:checked+.field-check__name {
+				&::before {
+					border-color: $input-icon-active;
+					background: $input-icon-white;
+				}
+                &::after {
+                    background-color: $theme-primary;
+                }
+			}
+		}
+
+		&[type=radio] {
+			&+.field-check__name {
+				&::before {
+					@include transition();
+					content: '';
+					display: block;
+					position: absolute;
+					top: 1px;
+					left: 0;
+					width: 20px;
+					height: 20px;
+					border: 2px solid $input-icon-normal;
+					border-radius: 50%;
+				}
+
+				&::after {
+					@include transition();
+					content: '';
+					position: absolute;
+					top: 7px;
+					left: 6px;
+					width: 8px;
+					height: 8px;
+					background: $input-icon-active;
+					border-radius: 50%;
+					opacity: 0;
+				}
+
+				&:hover {
+					&::before {
+						border-color: $input-icon-hover;
+					}
+				}
+			}
+
+			&:checked+.field-check__name {
+				&::before {
+					border-color: $input-icon-active;
+				}
+
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__name {
+		display: block;
+		position: relative;
+		font-size: 2rem;
+		line-height: 1.5;
+		color: $typography-primary;
+		padding-left: 30px;
+	}
+}

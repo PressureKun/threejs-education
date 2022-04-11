@@ -1,0 +1,57 @@
+.tabs {
+  border: 1px solid $theme-border;
+  border-radius: 16px;
+  position: relative;
+
+  &__btn {
+    border-bottom: 1px solid transparent;
+    &.active {
+      transition: border-bottom 0.2s ease-in-out 0s;
+      border-bottom: 1px solid $theme-primary;
+    }
+  }
+
+  &__controls {
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.2s ease-in-out 0s,
+    visibility 0.2s ease-in-out 0s,
+    height 0.2s ease-in-out 0s;
+    padding: 16px;
+
+    &:not(.active) {
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+    }
+  }
+
+  &__content {
+    
+    position: relative;
+    height: auto;
+    transition: opacity 0.2s ease-in-out 0s,
+    visibility 0.2s ease-in-out 0s,
+    height 0.2s ease-in-out 0s;
+    overflow: hidden;
+   
+  }
+
+  &__ajax-test {
+    position: absolute;
+    top: -33px;
+    right: 16px;
+    font-size: 14px;
+    color: $white-color;
+    background-color: $theme-primary;
+    padding: 8px;
+    border-radius: 8px 8px 0 0;
+  }
+}

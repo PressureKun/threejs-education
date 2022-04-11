@@ -1,0 +1,46 @@
+.mtp {
+	&__inline-item {
+		margin: 24px 0;
+		width: 100%;
+
+
+		&:after, &:before {
+			content: '';
+			clear: both;
+			display: block;
+		}
+
+		&--right {
+			text-align: right;
+
+			.mtp__inline-img {
+				float: right;
+				margin-left: 24px;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__inline-header {
+		margin-bottom: 24px;
+		width: 100%;
+
+		h2 {
+			font-size: 24px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	&__inline-img {
+		float: left;
+		margin-right: 24px;
+		margin-bottom: 24px;
+		max-width: 400px;
+
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+}

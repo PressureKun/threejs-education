@@ -1,0 +1,111 @@
+{% extends './layout.html' %}
+{% set nameCss= "article" %}
+{% block content %}
+	<main>
+				<div class="mtp">
+
+					<div class="wrapper">
+						{% include 'includes/article-sections/mtp-row-img.html' %}
+						{% include 'includes/article-sections/mtp-slider.html' %}
+						{% include 'includes/article-sections/mtp-gallery.html' %}
+						{% include 'includes/article-sections/mtp-document.html' %}
+						{% include 'includes/article-sections/mtp-table.html' %}
+						{% include 'includes/article-sections/mtp-spoiler.html' %}
+						{% include 'includes/article-sections/mtp-inline-item.html' %}
+						{% include 'includes/article-sections/mtp-inline-item-right.html' %}
+
+						<h2 style="text-align: center">Текстовые блоки</h2>
+
+						<h3 style="text-align: center">Текст по центру</h3>
+						<p style="text-align: center">Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский
+							набор
+							слов, но это не совсем так.
+							Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
+							тысячелетий
+							назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял
+							одно
+							из
+							самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической
+							латинской
+							литературе. </p>
+						<p style="text-align: center">В результате он нашёл неоспоримый первоисточник Lorem Ipsum в
+							разделах
+							1.10.32 и 1.10.33 книги "de
+							Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э.
+							Этот
+							трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum,
+							"Lorem
+							ipsum dolor sit amet..", происходит от одной из строк в разделе 1.10.32</p>
+
+						<h4 style="text-align: left">Текст по левому краю (выделение, подчеркивание, зачеркивание,
+							ссылка)</h4>
+						<p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не
+							совсем
+							так.
+							Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
+							тысячелетий
+							назад. <b> Ричард МакКлинток, профессор латыни</b><u> из колледжа Hampden-Sydney, штат
+								Вирджиния,</u> взял одно из
+							самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической
+							латинской
+							литературе. </p>
+						<p>В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33
+							книги
+							"de
+							Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э.
+							Этот
+							трактат по теории этики был очень популярен в эпоху Возрождения. <a href="">Первая строка
+								Lorem
+								Ipsum, "Lorem
+								ipsum dolor sit amet.."</a>, происходит от одной из строк в разделе 1.10.32</p>
+
+						<p style="text-align: right;"><strong>Почему он используется?</strong></p>
+
+						<blockquote>Инфляция в России, согласно такому варианту развития событий, составит 4,5% по
+							итогам года, а доллар будет стоить в среднем более 80 руб. до конца года (в том числе 80,8
+							руб. в четвертом квартале).
+						</blockquote>
+
+						<ul>
+							<li>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+								сосредоточиться.
+							</li>
+							<li>Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное
+								заполнение шаблона, а также реальное
+							</li>
+							<li>распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+								&quot;Здесь ваш текст.. Здесь ваш текст..
+							</li>
+						</ul>
+
+						<ol>
+							<li>Здесь ваш текст..&quot; Многие программы электронной вёрстки и редакторы HTML используют
+								Lorem Ipsum в качестве текста по
+							</li>
+							<li>умолчанию, так что поиск по ключевым словам &quot;lorem ipsum&quot; сразу показывает,
+								как много веб-страниц всё ещё дожидаются своего
+							</li>
+							<li>настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые
+								версии появились по ошибке,&nbsp;
+							</li>
+						</ol>
+
+						<div class="tags">
+							<a href="" class="tags__item">Текст хэштега</a>
+							<a href="" class="tags__item">Текст хэштега</a>
+							<a href="" class="tags__item">Текст хэштега</a>
+							<a href="" class="tags__item">Текст хэштега</a>
+							<a href="" class="tags__item">Текст хэштега</a>
+							<a href="" class="tags__item">Текст хэштега</a>
+							<a href="" class="tags__item">Текст хэштега</a>
+						</div>
+
+					</div>
+				</div>
+	</main>
+
+{% endblock %}
+<!--подключение скриптов-->
+{% block scripts %}
+	<script src="scripts/article.js"></script>
+{% endblock %}

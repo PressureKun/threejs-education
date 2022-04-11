@@ -1,0 +1,48 @@
+{% extends './layout.html' %}
+{% set nameCss= "index" %}
+{% block content %}
+	<main>
+		<div class="wrapper">
+			<div style="display: grid;grid-template-columns: 1fr 1fr; grid-gap: 32px; margin-bottom: 32px; padding-top: 24px">
+				<div>
+					<h1>h1</h1>
+					<h2>h2</h2>
+					<h3>h3</h3>
+					<h4>h4</h4>
+					<h5>h5</h5>
+					<h6>h6</h6>
+				</div>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis ex nostrum quisquam repellat rerum velit!</p>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolore ipsa ipsam praesentium quam veritatis?</span>
+					<button class="btn btn--primary" style="width: 250px; margin: 24px 0; display: block">btn--primary</button>
+					<a class="btn btn--primary" style="width: 250px; margin-bottom: 24px; display: block">btn--primary</a>
+					<button class="btn burger-btn js-burger-btn" type="button"><span></span></button>
+				</div>
+				<div>
+					{% include 'includes/blocks/default-form.html' %}
+				</div>
+				<div>
+					{% include 'includes/blocks/default-selects.html' %}
+				</div>
+				<div>
+					{% include 'includes/blocks/default-tabs.html' %}
+				</div>
+				<div>
+					{% include 'includes/blocks/default-tabs-ajax.html' %}
+				</div>
+			</div>
+
+			<ul>
+				<li>
+					<a href="article.html">Текстовая страница</a>
+				</li>
+			</ul>
+		</div>
+	</main>
+
+{% endblock %}
+<!--подключение скриптов-->
+{% block scripts %}
+	<script src="scripts/index.js"></script>
+{% endblock %}
